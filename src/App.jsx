@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <h1>Hola mundo desde Vercel!</h1>
+      <h2>Hi from Vercel && GitHub Pages</h2>
     </>
   )
 }
