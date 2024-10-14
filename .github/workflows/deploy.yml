@@ -1,32 +1,27 @@
-name: Deploy to GitHub Pages
+name: Deploy Vite to GitHub Pages
 
 on:
   push:
     branches:
-      - master  # Cambia si usas una rama diferente
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+      - master  # O la rama que uses
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out the repository
+    - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v3
       with:
-        node-version: 18
+        node-version: 16
 
     - name: Install dependencies
       run: npm install
 
-    - name: Build the project
+    - name: Build project
       run: npm run build
 
     - name: Deploy to GitHub Pages
