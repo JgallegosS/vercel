@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - master  # Cambia si usas una rama diferente
+      - main  # Cambia si usas una rama diferente
 
 permissions:
   contents: read
